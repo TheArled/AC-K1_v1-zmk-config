@@ -1,0 +1,6 @@
+if SHIELD_AC_K1_V1
+
+config ZMK_AC_K1_V1
+    default "AC_K1 v1"
+
+endif
