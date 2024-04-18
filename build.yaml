@@ -19,4 +19,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ac_k1_v1
+    shield: AC_K1_v1
