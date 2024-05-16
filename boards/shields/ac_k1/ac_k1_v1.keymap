@@ -3,6 +3,9 @@
 
 / {
 	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
 		// ┌───┐ ┌───┬───┬───┬───┐┌───┬───┬───┬───┐┌───┬───┬───┬───┐
 		// │ESC│ │F1 │F2 │F3 │F4 ││F5 │F6 │F7 │F8 ││F9 │F10│F11│F12│
 		// ├───┼─┴─┬─┴─┬─┴─┬─┴─┬─┴┴┬──┴┬──┴┬──┴┬──┴┼───┼───┼───┼───┼───┬───┐
@@ -23,6 +26,7 @@
 			&kp LCTRL &kp A     &kp S   &kp D     &kp F     &kp G     &kp H   &kp J   &kp K   &kp L     &kp SEMI  &kp APOS  &kp NUHS                    &kp PG_DN
 			&kp LSHFT &kp BSLH  &kp Z   &kp X     &kp C     &kp V     &kp B   &kp N   &kp M   &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT           &kp UP  &kp END
 			&kp LCTRL &kp LCMD  &kp     &kp LALT  &kp SPACE                                   &kp RALT  &mo 1     &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
-		>;
+			>;
+		};
 	};
 };
