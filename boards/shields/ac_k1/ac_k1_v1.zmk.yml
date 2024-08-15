@@ -1,6 +1,6 @@
 file_format: "1"
 id: ac_k1_v1
-name: ac_k1 v1
+name: AC_K1_v1
 type: shield
 url: https://github.com/TheArled/zmk-config
 requires: [pro_micro]
