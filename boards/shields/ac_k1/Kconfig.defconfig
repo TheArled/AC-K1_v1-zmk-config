@@ -1,6 +1,6 @@
 if SHIELD_AC_K1_V1
 
 config ZMK_KEYBOARD_NAME
-	default "ac_k1_v1"
+	default "AC-K1_v1"
 
 endif
