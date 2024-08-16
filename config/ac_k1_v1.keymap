@@ -3,6 +3,22 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        copyright: copyright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N9>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "COPYRIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,7 +67,7 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none  &none  &none     &none       &none       &none         &none         &none       &none  &none
 &none         &none         &none         &none         &none            &none  &none  &none     &none       &kp INS     &kp HOME      &kp PG_UP     &none              &none
 &none         &none         &none         &none         &none            &none  &none  &none     &none       &kp DEL     &kp END       &kp PG_DN     &none       &none  &none
-&none         &none         &none         &none         &none            &none  &none  &none     &none       &none       &none         &none         &kp CAPS    &none  &none
+&none         &none         &none         &none         &copyright       &none  &none  &none     &none       &none       &none         &none         &kp CAPS    &none  &none
 &none         &trans        &none                                               &none                        &none       &none         &none         &none       &none  &none
             >;
         };
