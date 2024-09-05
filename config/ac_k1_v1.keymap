@@ -43,6 +43,30 @@
 
             label = "REGISTERED";
         };
+
+        em_dash: em_dash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N5 &kp N1>;
+
+            label = "EM_DASH";
+        };
+
+        en_dash: en_dash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N1 &kp N5 &kp N0>;
+
+            label = "EN_DASH";
+        };
     };
 
     keymap {
@@ -93,7 +117,7 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &none       &none  &none     &none       &none       &none         &none         &none       &none  &none
 &none         &none         &none         &none         &registered      &trademark  &none  &none     &none       &kp INS     &kp HOME      &kp PG_UP     &none       &none  &none
 &none         &none         &none         &none         &none            &none       &none  &none     &none       &kp DEL     &kp END       &kp PG_DN     &none              &none
-&none         &none         &none         &none         &copyright       &none       &none  &none     &none       &none       &none         &none         &kp CAPS    &none  &soft_off
+&none         &none         &none         &none         &copyright       &none       &none  &none     &none       &none       &em_dash      &en_dash      &kp CAPS    &none  &soft_off
 &none         &trans        &none                                                    &none                        &none       &none         &none         &none       &none  &none
             >;
         };
