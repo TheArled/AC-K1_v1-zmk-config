@@ -27,7 +27,9 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N1 &kp N5 &kp N3>;
+                <&kp N0 &kp N1 &kp N5 &kp N3>,
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "TRADEMARK";
         };
@@ -39,7 +41,9 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N1 &kp N7 &kp N4>;
+                <&kp N0 &kp N1 &kp N7 &kp N4>,
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "REGISTERED";
         };
@@ -51,7 +55,9 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N1 &kp N5 &kp N1>;
+                <&kp N0 &kp N1 &kp N5 &kp N1>,
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "EM_DASH";
         };
@@ -63,7 +69,9 @@
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_tap>,
-                <&kp N0 &kp N1 &kp N5 &kp N0>;
+                <&kp N0 &kp N1 &kp N5 &kp N0>,
+                <&macro_release>,
+                <&kp LALT>;
 
             label = "EN_DASH";
         };
