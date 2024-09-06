@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &soft_off { hold-time-ms = <2000>; };
 
@@ -75,6 +76,20 @@
 
             label = "EN_DASH";
         };
+
+        space_spam: space_spam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
+            label = "SPACE_SPAM";
+        };
+
+        mouse_spam: mouse_spam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1 &mkp MB1>;
+            label = "MOUSE_SPAM";
+        };
     };
 
     keymap {
@@ -121,12 +136,12 @@
             // └────┴────┴────┴─────────────────────┴────┴────┴────┴───┴───┴───┘
 
             bindings = <
-&bt BT_CLR  &none         &kp PSCRN     &kp K_COFFEE  &kp PAUSE_BREAK                &none  &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none  &none
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &none  &none     &none       &none       &none         &none         &none       &none  &none
-&none       &none         &none         &none         &registered      &trademark    &none  &none     &none       &kp INS     &kp HOME      &kp PG_UP     &none       &none  &none
-&none       &none         &none         &none         &none            &none         &none  &none     &none       &kp DEL     &kp END       &kp PG_DN     &none              &none
-&none       &none         &none         &none         &copyright       &none         &none  &none     &none       &none       &em_dash      &en_dash      &kp CAPS    &none  &soft_off
-&none       &trans        &none                                                      &none                        &none       &none         &none         &none       &none  &none
+&bt BT_CLR  &none         &kp PSCRN     &kp K_COFFEE  &kp PAUSE_BREAK                &none        &kp C_PP  &kp C_PREV  &kp C_NEXT  &kp C_VOL_UP  &kp C_VOL_DN  &kp C_MUTE  &none        &none
+&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &none        &none     &none       &none       &none         &none         &none       &none        &none
+&none       &none         &none         &none         &registered      &trademark    &none        &none     &none       &kp INS     &kp HOME      &kp PG_UP     &none       &mouse_spam  &none
+&none       &none         &none         &none         &none            &none         &none        &none     &none       &kp DEL     &kp END       &kp PG_DN     &none                    &none
+&none       &none         &none         &none         &copyright       &none         &none        &none     &none       &none       &em_dash      &en_dash      &kp CAPS    &none        &soft_off
+&none       &trans        &none                                                      &space_spam                        &none       &none         &none         &none       &none        &none
             >;
         };
     };
