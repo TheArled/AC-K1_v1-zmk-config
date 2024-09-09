@@ -92,6 +92,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        reset_bt {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <0 58 78>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
