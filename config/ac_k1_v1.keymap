@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
 
 &soft_off { hold-time-ms = <2000>; };
 
@@ -168,7 +169,7 @@
 &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4  &none        &none     &none       &none       &none         &none         &none       &none        &none
 &none       &none         &none         &none         &registered      &trademark    &none        &none     &none       &kp INS     &kp HOME      &kp PG_UP     &none       &mouse_spam  &bt BT_NXT
 &none       &none         &none         &none         &none            &none         &none        &none     &none       &kp DEL     &kp END       &kp PG_DN     &none                    &bt BT_PRV
-&none       &none         &none         &none         &copyright       &none         &none        &none     &none       &ellipsis   &em_dash      &en_dash      &kp CAPS    &none        &none
+&none       &out OUT_USB  &out OUT_BLE  &none         &copyright       &none         &none        &none     &none       &ellipsis   &em_dash      &en_dash      &kp CAPS    &none        &none
 &none       &none         &none                                                      &space_spam                        &none       &none         &none         &none       &none        &none
             >;
         };
